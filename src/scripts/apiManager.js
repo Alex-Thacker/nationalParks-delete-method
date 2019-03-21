@@ -5,3 +5,10 @@ const getAllParks = () => fetch(`${apiBaseUrl}/parks`).then(response => response
 const deletePark = (parkId) => fetch(`${apiBaseUrl}/parks/${parkId}`, {
   method: "DELETE"
 })
+
+
+const getAllMonuments = () => fetch(`${apiBaseUrl}/monuments`).then(response => response.json())
+
+const deleteMonument = (monumentId) => fetch(`${apiBaseUrl}/monuments/${monumentId}`, {
+  method: "DELETE"
+})

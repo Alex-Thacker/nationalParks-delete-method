@@ -7,11 +7,21 @@ const buildElement = (elementType, elementId, elementTextContent) => {
   return htmlElement;
 };
 
+
+
+
 clearElement = domElement => {
   while (domElement.firstChild) {
     domElement.removeChild(domElement.firstChild);
   }
 };
 
+
+
+
 const displayContainer = document.querySelector("#display-container");
 displayContainer.appendChild(buildElement("section", "national--parks"));
+
+
+
+displayContainer.appendChild(buildElement("section", "monument-container"))

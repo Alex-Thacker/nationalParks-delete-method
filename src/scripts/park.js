@@ -13,3 +13,18 @@ const buildParkHtml = parkObject => {
   deleteParkButton.addEventListener("click", handleDelete)
   return parkArticle;
 };
+
+
+
+
+const buildMonuments = monumentObject => {
+
+    const monumentArticle = buildElement("article")
+    monumentArticle.appendChild(buildElement("h3", undefined, monumentObject.name));
+    monumentArticle.appendChild(buildElement("p", undefined, monumentObject.state));
+
+    let deleteMonumentButton = buildElement("button", `delete-${monumentObject.id}`, "Delete Monument")
+    monumentArticle.appendChild(deleteMonumentButton)
+    deleteMonumentButton.addEventListener("click", monumentDelete)
+    return monumentArticle
+}

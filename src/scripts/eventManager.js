@@ -5,3 +5,13 @@ const handleDelete = () => {
   deletePark(parkId)
   .then(() => listNationalParks())
 };
+
+
+const monumentDelete = () => {
+  let monumentId = event.target.id.slice(7)
+  console.log(event.target.id.slice(7))
+
+  deleteMonument(monumentId)
+  .then(() => listMonuments())
+
+}
